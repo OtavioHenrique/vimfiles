@@ -4,6 +4,9 @@ set history=1000
 
 set nocompatible
 
+let g:NERDTreeWinPos="left"
+let NERDTreeWinPos=1
+
 "necessary on some Linux distros for pathogen to properly load bundles
 filetype on
 filetype off
