@@ -48,3 +48,16 @@ imap <C-v> <Esc>pi
 imap <C-y> <Esc>ddi
 map <C-z> <Esc>
 imap <C-z> <Esc>ui
+
+" disabling polyglot
+
+let g:polyglot_disabled = ["css"]
+let g:polyglot_disabled = ["ruby"]
+let g:polyglot_disabled = ["go"]
+let g:polyglot_disabled = ["html5"]
+let g:polyglot_disabled = ["git"]
+let g:polyglot_disabled = ["c/c++"]
+let g:polyglot_disabled = ["c++1"]
+let g:polyglot_disabled = ["haskell"]
+let g:polyglot_disabled = ["python"]
+
