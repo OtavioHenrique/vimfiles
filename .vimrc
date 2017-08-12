@@ -13,7 +13,7 @@ filetype off
 
 "load pathogen managed plugins
 call pathogen#infect()
-
+call pathogen#helptags()
 "turn on syntax highlighting
 syntax on
 
