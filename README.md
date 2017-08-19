@@ -65,7 +65,7 @@ this file.
 You should also create a new .gvimrc file in your home directory. You can do
 it on Linux/Mac like this:
 
-```echo "source ~/.vim/gvimrc" > ~/.gvimrc```
+```echo "source ~/.vim/gvimrc" > ~/.vimrc```
 
 On Windows you should create a _gvimrc (underline instead of dot) and add
 the following line inside:
