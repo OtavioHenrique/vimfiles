@@ -22,3 +22,24 @@
 [submodule "bundle/vim-json"]
 	path = bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "bundle/vim-endwise"]
+	path = bundle/vim-endwise
+	url = https://github.com/tpope/vim-endwise.git
+[submodule "bundle/vim-go"]
+	path = bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
