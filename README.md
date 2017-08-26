@@ -52,7 +52,7 @@ Now you should create a new .vimrc file in your home directory that
 loads the pre-configured one that comes bundled in this package. You can do it
 on Linux/Mac like this:
 
-```echo "source ~/.vim/vimrc" > ~/.vimrc```
+```echo "source ~/.vim/.vimrc" > ~/.vimrc```
 
 On Windows you should create a _vimrc (underline instead of dot) and add
 the following line inside:
@@ -65,7 +65,7 @@ this file.
 You should also create a new .gvimrc file in your home directory. You can do
 it on Linux/Mac like this:
 
-```echo "source ~/.vim/gvimrc" > ~/.gvimrc```
+```echo "source ~/.vim/.vimrc" > ~/.gvimrc```
 
 On Windows you should create a _gvimrc (underline instead of dot) and add
 the following line inside:
