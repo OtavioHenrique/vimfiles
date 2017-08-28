@@ -75,6 +75,10 @@ the following line inside:
 This way you can override the default GUI configuration by adding your own inside
 this file.
 
+And after this, you may run the following line, to start git submodules (Plugins):
+
+```git submodule update --init --recursive```
+
 ## Plugins
 
 I recommend that you enter in each repository and read the documentation to learn more about how to use it :)
