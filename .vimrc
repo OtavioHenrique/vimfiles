@@ -9,19 +9,31 @@ set number
 let g:NERDTreeWinPos="left"
 let NERDTreeWinPos=1
 
+set clipboard=unnamed
+set clipboard=unnamedplus
+
+set autoindent
 "necessary on some Linux distros for pathogen to properly load bundles
 filetype on
 filetype off
-
 "load pathogen managed plugins
 call pathogen#infect()
 call pathogen#helptags()
 "turn on syntax highlighting
+inoremap <C-A> <ESC>
 syntax on
-
 "some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
+
+set history=1000
+set incsearch     " do incremental searching
+set hlsearch      " highlight search
+set laststatus=2  " Always display the status line
+set noswapfile
+set showmatch    " blink matching pairs {[(
+set winwidth=87
+set winheight=30
 
 colorscheme cyberpunk
 
@@ -39,14 +51,34 @@ set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
-set paste
-set clipboard=unnamed
-set clipboard=unnamedplus
+" Indent if we're at the beginning of a line. Else, do completion.
+function! InsertTabWrapper()
+    let col = col('.') - 1
+
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
 
 " normal copy/paste
-vmap <C-c> y<Esc>i
-vmap <C-x> d<Esc>i
-imap <C-v> <Esc>pi
-imap <C-y> <Esc>ddi
-map <C-z> <Esc>
-imap <C-z> <Esc>ui
+" vmap <C-c> y<Esc>i
+" vmap <C-x> d<Esc>i
+" imap <C-v> <Esc>pi
+" imap <C-y> <Esc>ddi
+" map <C-z> <Esc>
+" imap <C-z> <Esc>ui
+
+" let g:ackprg = 'ag --nogroup --nocolor --column'
+if executable('ag') 
+    " Note we extract the column as well as the file and line number
+    set grepprg=ag\ --nogroup\ --nocolor\ --column
+    set grepformat=%f:%l:%c%m
+endif
+
+nmap <silent> <RIGHT> :cnext<CR>
+nmap <silent> <LEFT> :cprev<CR>
+
+map <C-n> :NERDTreeToggle<CR>
+filetype detect
