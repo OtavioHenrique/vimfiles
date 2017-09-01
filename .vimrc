@@ -41,6 +41,8 @@ set visualbell t_vb=
 set lines=42
 set columns=213
 
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
 "setting tab to 2 spaces
 set tabstop=2
 set shiftwidth=2
@@ -62,6 +64,8 @@ function! InsertTabWrapper()
     endif
 endfunction
 
+set autoread
+
 " normal copy/paste
 " vmap <C-c> y<Esc>i
 " vmap <C-x> d<Esc>i
@@ -82,3 +86,12 @@ nmap <silent> <LEFT> :cprev<CR>
 
 map <C-n> :NERDTreeToggle<CR>
 filetype detect
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
