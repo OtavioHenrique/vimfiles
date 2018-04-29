@@ -12,6 +12,10 @@ let NERDTreeWinPos=1
 set clipboard=unnamed
 set clipboard=unnamedplus
 
+"tab naviagtion
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
 set guifont=Monospace\ 14
 
 set autoindent
