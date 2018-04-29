@@ -79,6 +79,17 @@ And after this, you may run the following line, to start git submodules (Plugins
 
 ```git submodule update --init --recursive```
 
+## Clipboard
+
+Getting Vim to work with the X11 clipboard can be a struggle if you want to run Vim in a terminal. In this case, you will have to check for X11 clipboard support. The GUI version of Vim always has clipboard support.
+
+From the console, type:
+
+`vim --version | grep clipboard`
+If you see +clipboard or +xterm_clipboard, you are good to go. If it's -clipboard and  -xterm_clipboard, you will need to look for a version of Vim that was compiled with clipboard support. On Debian and Ubuntu, to obtain clipboard support install the packages vim-gtk or  vim-gnome (not vim-tiny). [retired from vim wiki](http://vim.wikia.com/wiki/Accessing_the_system_clipboard)
+
+So, if you want clipboard working inside vim with external clipboard you just need to install gvim and with that `.vimrc` everything will work fine.
+
 ## Plugins
 
 I recommend that you enter in each repository and read the documentation to learn more about how to use it :)
