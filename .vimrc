@@ -6,11 +6,13 @@ set nocompatible
 
 set number
 
+"for mac
+set paste
+
 let g:NERDTreeWinPos="left"
 let NERDTreeWinPos=1
 
 set clipboard=unnamed
-set clipboard=unnamedplus
 
 "tab naviagtion
 nnoremap <C-Left> :tabprevious<CR>
@@ -18,7 +20,7 @@ nnoremap <C-Right> :tabnext<CR>
 
 set guifont=Monospace\ 14
 
-set autoindent
+"set autoindent
 "necessary on some Linux distros for pathogen to properly load bundles
 filetype on
 filetype off
@@ -41,7 +43,7 @@ set showmatch    " blink matching pairs {[(
 set winwidth=87
 set winheight=30
 
-colorscheme cyberpunk
+colorscheme molokai
 
 set visualbell t_vb=
 set lines=42
